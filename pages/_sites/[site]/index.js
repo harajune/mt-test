@@ -146,6 +146,7 @@ export async function getStaticProps({ params: { site } }) {
       customDomain: site,
     };
   }
+  console.log(site);
   const data = await prisma.site.findUnique({
     where: filter,
     include: {
