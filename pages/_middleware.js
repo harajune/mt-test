@@ -16,7 +16,6 @@ export default function middleware(req) {
       ? hostname
           .replace(`.vercel.pub`, "")
           .replace(`.mm-inc.vercel.app`, "") // you can use wildcard subdomains on .vercel.app links that are associated with your Vercel team slug
-          .replace('.mkt-mng.tech', "")
       : // in this case, our team slug is "platformize", thus *.platformize.vercel.app works
         hostname.replace(`.localhost:3000`, "");
 
